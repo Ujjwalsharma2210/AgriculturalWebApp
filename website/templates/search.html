@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<br />
+<form method="post">
+    <!-- <h3 align="center">Find</h3> -->
+    <div class="form-group">
+        <h2><label for="plantname">Search for a plant</label><h2/>
+        <input
+            type="text"
+            class="form-control"
+            id="plantname"
+            name="plantname"
+            placeholder="Enter plant name"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary">FIND</button>
+</form>
+<br />
+
+<p style="font-size:110%;">
+    {% for element in plantsInfo %}
+        {{ element }}
+        <br />
+    {% endfor %}
+    <br />
+</p>
+
+* Database was outsourced
+
+<!-- <img src="" alt="plant image" width="500"> -->
+
+{% endblock %}
